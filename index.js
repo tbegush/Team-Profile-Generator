@@ -1,5 +1,9 @@
 const inquirer = require("inquirer");
 const fs = require("fs");
+const team = [];
+const Engineer = require("./lib/Engineer");
+const Intern = require("./lib/Intern");
+const Manager = require("./lib/Manager");
 
 // manager’s name, employee ID, email address, and office number
 const managerQuestions = [
@@ -16,7 +20,6 @@ const managerQuestions = [
       }
     },
   },
-
   {
     type: "input",
     name: "employeeID",
@@ -30,11 +33,10 @@ const managerQuestions = [
       }
     },
   },
-
   {
     type: "input",
     name: "emailAddress",
-    message: "What is the employee ID number?",
+    message: "What is the email address?",
     validate: (emailAddress) => {
       if (emailAddress) {
         return true;
@@ -44,7 +46,6 @@ const managerQuestions = [
       }
     },
   },
-
   {
     type: "input",
     name: "officeNumber",
@@ -58,13 +59,41 @@ const managerQuestions = [
       }
     },
   },
-  {
-    type: "list",
-    name: "employeeType",
-    message: "Which other team members would you like to add?",
-    choices: ["intern", "engineer", "quit"],
-  },
 ];
+
+function followUp() {
+  inquirer
+    .prompt([
+      {
+        type: "list",
+        name: "employeeType",
+        message: "Which other team members would you like to add?",
+        choices: ["intern", "engineer", "quit"],
+      },
+    ])
+    .then(({ employeeType }) => {
+      // employeeType === "intern"
+      //   ? internPrompt()
+      //   : employeeType === "engineer"
+      //   ? engineerPrompt()
+      //   : writeToFile();
+      if (employeeType === "intern")
+      {internPrompt();}
+      
+      else if (employeeType === "engineer") {
+        engineerPrompt();
+      }
+      else writeToFile();
+    });
+}
+
+function engineerPrompt(){
+  inquirer.prompt(engineerQuestions).then(( { engineerName, employeeID, emailAddress, githubName })=>{
+    const newEngineer = new Engineer(engineerName, employeeID, emailAddress, githubName);
+  team.push(newEngineer);
+  //followUp();
+});
+}
 
 //engineer’s name, ID, email, and GitHub
 const engineerQuestions = [
@@ -99,7 +128,7 @@ const engineerQuestions = [
   {
     type: "input",
     name: "emailAddress",
-    message: "What is the employee ID number?",
+    message: "What is the employee email address?",
     validate: (emailAddress) => {
       if (emailAddress) {
         return true;
@@ -130,6 +159,14 @@ const engineerQuestions = [
     choices: ["intern", "engineer", "quit"],
   },
 ];
+
+function internPrompt(){
+  inquirer.prompt(internQuestions).then(( { internName, employeeID, emailAddress, schoolName })=>{
+    const newIntern = new Intern(internName, employeeID, emailAddress, schoolName);
+  team.push(newIntern);
+ // followUp();
+});
+}
 
 //intern’s name, ID, email, and school
 const internQuestions = [
@@ -164,7 +201,7 @@ const internQuestions = [
   {
     type: "input",
     name: "emailAddress",
-    message: "What is the employee ID number?",
+    message: "What is the email address?",
     validate: (emailAddress) => {
       if (emailAddress) {
         return true;
@@ -178,7 +215,7 @@ const internQuestions = [
   {
     type: "input",
     name: "schoolName",
-    message: "What is the office number?",
+    message: "What is the school name?",
     validate: (schoolName) => {
       if (schoolName) {
         return true;
@@ -196,29 +233,27 @@ const internQuestions = [
   },
 ];
 
-// TODO: Create a function to write index.html file
+// function to write index.html file
 function writeToFile(fileName, data) {
-  return new Promise((resolve, reject) => {
-    fs.writeFile(fileName, data, (err) => {
-      if (err) {
-        reject(err);
-        return;
-      }
+    //fs.writeFileSync(fileName, data);
+    console.log(team)
+  };
 
-      resolve({
-        ok: true,
-        message: "File created!",
-      });
-    });
-  });
-}
 
-// TODO: Create a function to initialize app
+// function to initialize app
 function init() {
-  inquirer.prompt(questions).then((answer) => {
-    //   const page = generateMD(answer);
-    writeToFile("./index.html", page);
-  });
+  inquirer
+    .prompt(managerQuestions)
+    .then(({ teamManager, employeeID, emailAddress, officeNumber }) => {
+      const newManager = new Manager(
+        teamManager,
+        employeeID,
+        emailAddress,
+        officeNumber
+      );
+      team.push(newManager);
+      followUp();
+    });
 }
 
 // Function call to initialize app
