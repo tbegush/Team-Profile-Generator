@@ -35,7 +35,7 @@
 <br />
 <p align="center">
   <a href="https://github.com/tbegush/team-profile-generator-logo.png">
-    <img src="./Team-Profile-Generator-logo.png" alt="Logo" width="363" height=auto>
+    <img src="./team-profile-generator-logo.png" alt="Logo" width="363" height=auto>
   </a>
 
   <h3 align="center">Team-Profile-Generator</h3>
