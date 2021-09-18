@@ -34,7 +34,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
-  <a href="https://github.com/tbegush/Team-Profile-Generator-logo.png">
+  <a href="https://github.com/tbegush/team-profile-generator-logo.png">
     <img src="./Team-Profile-Generator-logo.png" alt="Logo" width="363" height=auto>
   </a>
 
@@ -87,7 +87,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-![Team-Profile-Generator-screenshot](/Team-Profile-Generator-screenshot.png)
+![Team-Profile-Generator-screenshot](/team-profile-generator-screenshot.png)
 
 
 
