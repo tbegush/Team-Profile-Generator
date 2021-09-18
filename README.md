@@ -1,4 +1,4 @@
-# Budget-Tracker
+# Team-Profile-Generator
 <!--
 *** Thanks for checking out the Best-README-Template. If you have a suggestion
 *** that would make this better, please fork the repo and create a pull request
@@ -9,7 +9,7 @@
 ***
 *** To avoid retyping too much info. Do a search and replace for the following:
 *** github_username, repo_name, twitter_handle, email, project_title, project_description
-*** tbegush, Budget-Tracker, @tbegush, tbegush@gmail.com, Budget-Tracker, A PWA to track your budget while you travel!
+*** tbegush, Team-Profile-Generator, @tbegush, tbegush@gmail.com, Team-Profile-Generator, A CLI app to generate an HTML page for your team!
 -->
 
 
@@ -34,23 +34,23 @@
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
-  <a href="https://github.com/tbegush/budget-tracker-logo.png">
-    <img src="./budget-tracker-logo.png" alt="Logo" width="363" height=auto>
+  <a href="https://github.com/tbegush/Team-Profile-Generator-logo.png">
+    <img src="./Team-Profile-Generator-logo.png" alt="Logo" width="363" height=auto>
   </a>
 
-  <h3 align="center">Budget-Tracker</h3>
+  <h3 align="center">Team-Profile-Generator</h3>
 
   <p align="center">
-    A PWA to track your budget while you travel!
+    A CLI app to generate an HTML page for your team!
     <br />
-    <a href="https://github.com/tbegush/Budget-Tracker"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/tbegush/Team-Profile-Generator"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://tbegush.github.io/Budget-Tracker">View Demo</a>
+    <a href="https://tbegush.github.io/Team-Profile-Generator">View Demo</a>
     ·
-    <a href="https://github.com/tbegush/Budget-Tracker/issues">Report Bug</a>
+    <a href="https://github.com/tbegush/Team-Profile-Generator/issues">Report Bug</a>
     ·
-    <a href="https://github.com/tbegush/Budget-Tracker/issues">Request Feature</a>
+    <a href="https://github.com/tbegush/Team-Profile-Generator/issues">Request Feature</a>
   </p>
 </p>
 
@@ -87,11 +87,9 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-![product-screenshot]("./budget-tracker-screenshot.png")
+![Team-Profile-Generator-screenshot](/Team-Profile-Generator-screenshot.png)
 
-*** Here's a blank template to get started:
-***To avoid retyping too much info. Do a search and replace with your text editor for the following:**
-*** `tbegush`, `Budget-Tracker`, `@tbegush`, `tbegush@gmail.com`, `Budget-Tracker`, `A search for github repositories!`
+
 
 
 ### Built With
@@ -115,7 +113,7 @@ To get a local copy up and running follow these simple steps.
 
 1. Clone the repo
    ```sh
-   git clone https://github.com/tbegush/Budget-Tracker.git
+   git clone https://github.com/tbegush/Team-Profile-Generator.git
    ```
 
 
@@ -131,7 +129,7 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 <!-- ROADMAP -->
 ## Roadmap
 
-See the [open issues](https://github.com/tbegush/Budget-Tracker/issues) for a list of proposed features (and known issues).
+See the [open issues](https://github.com/tbegush/Team-Profile-Generator/issues) for a list of proposed features (and known issues).
   * Specificity in the adoption searches
   * FAQ section
   * Sponsorship
@@ -163,7 +161,7 @@ Distributed under the MIT License. See `LICENSE` file for more information.
 
 Kama Castaneda - [@tbegush](https://twitter.com/tbegush) - tbegush@gmail.com - 
 
-Project Link: [https://github.com/tbegush/Budget-Tracker](https://github.com/tbegush/Budget-Tracker)
+Project Link: [https://github.com/tbegush/Team-Profile-Generator](https://github.com/tbegush/Team-Profile-Generator)
 
 
 
