@@ -9,7 +9,7 @@ const generateTeam = (team) => {
           <p>${member.getName()}</p>
           <p>${member.getRole()}</p>
           <p>${member.getId()}</p>
-          <p>${member.getEmail()}</p>
+          <p><a href="mailto:${member.getEmail()}">${member.getEmail()}</p>
           ${generateField(member)}
         </section>
       `);
@@ -21,9 +21,9 @@ function generateField(member) {
   if (member.getRole() === "Manager") {
     return `<p>${member.getofficeNumber()}</p>`;
   } else if (member.getRole() === "Engineer") {
-    return `<p>${member.getGithub()}</p>`;
+    return `<p><a href="https://github.com/${member.getGithub()}"> Here's my GitHub </a></p>`;
   }
-  return `<p>${member.getSchool()}</p>`;
+  return `<p><a href="https://www.${member.getSchool()}.edu"> Here's my school's website </p>`;
 }
 
 // create the projects section
@@ -93,7 +93,7 @@ module.exports = (team) => {
     <body>
       <header>
         <div class="container flex-row justify-space-between align-center py-3">
-          <h1 class="page-title text-secondary bg-dark py-2 px-3"> Header??? </h1>
+          <h1 class="page-title text-secondary bg-dark py-2 px-3"> Here's your team! </h1>
           <nav class="flex-row">
             <a class="ml-2 my-1 px-2 py-1 bg-secondary text-dark" href="https://github.com/tbegush">GitHub</a>
           </nav>
